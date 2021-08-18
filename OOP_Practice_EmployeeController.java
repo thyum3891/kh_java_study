@@ -30,7 +30,7 @@ public class OOP_Practice_EmployeeController {
 
 	public void remove() {
 
-		e = null;
+		e = new OOP_Practice_Employee();
 
 	}
 
