@@ -40,6 +40,7 @@ public class ObjectArray_Practice_MemberController {
 	public void insertMember(String id, String name, String password, String email, char gender, int age) {
 		
 		for (int i = 0; i < m.length; i++) {
+			
 			if (m[i] == null) {
 				m[i] = new ObjectArray_Practice_Member(id, name, password, email, gender, age);
 				break;
@@ -51,6 +52,9 @@ public class ObjectArray_Practice_MemberController {
 		String str = "";
 
 		for (int i = 0; i < m.length; i++) {
+			if (m[i]==null) {
+				continue;
+			}
 			if (m[i].getId().equals(id)) {
 				str += m[i].getId() + " ";
 				str += m[i].getName() + " ";
